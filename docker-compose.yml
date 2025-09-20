@@ -23,5 +23,5 @@ services:
       - ./ssl/var/lib/letsencrypt:/var/lib/letsencrypt
       - ./ssl/var/log/letsencrypt:/var/log/letsencrypt
       - .:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email admin@ncit.edu.np --agree-tos --no-eff-email -d conference.ncit.edu.np --non-interactive --dry-run
+    command: certonly --webroot --webroot-path=/var/www/html --email bhusan@ncit.edu.np --agree-tos --no-eff-email -d conference.ncit.edu.np --non-interactive
     restart: on-failure
