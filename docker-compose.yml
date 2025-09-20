@@ -11,12 +11,12 @@ services:
     volumes:
       - .:/usr/share/nginx/html:ro
       - ./default.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./ssl-certs:/etc/letsencrypt:ro  # Bind mount
+      - ./ssl-certs:/etc/letsencrypt:ro  # Mount the entire ssl-certs directory
 
   certbot:
     image: certbot/certbot
     container_name: certbot
     volumes:
-      - ./ssl-certs:/etc/letsencrypt  # Same bind mount
+      - ./ssl-certs:/etc/letsencrypt  # Same mount
       - .:/var/www/html
     command: certonly --webroot --webroot-path=/var/www/html --email bhusan@ncit.edu.np --agree-tos --no-eff-email -d conference.ncit.edu.np --non-interactive
