@@ -651,7 +651,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  color: #fff;
+  color: #89cff0;
   font-size: 14px;
   padding: 0 15px;
   margin-top: 10px;
@@ -2585,3 +2585,15 @@ footer {
 }
 
 /* clok */
+li.custom-list{
+  line-height: "1.8";
+  display: list-item;
+  list-style-type: disc;
+}
+
+b.stage-list{
+  font-weight:bolder;
+  font-style: italic;
+}
+
+
